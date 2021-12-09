@@ -1,0 +1,303 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: black;
+}
+
+.main-container {
+  max-width: 1000px;
+  margin: auto;
+  background-color: white;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+  margin: auto;
+  padding: 0 10px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100px;
+  background: white;
+  z-index: 100;
+  max-width: 1000px;
+}
+/* The header has two divs - first one has the logo and the company name and 2nd one has nav links */
+.logo-name {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.logo {
+  height: 70px;
+  width: 70px;
+}
+
+.name {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+nav a:link,
+nav a:visited {
+  padding: 10px;
+  list-style: none;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+nav a:hover,
+nav a:active {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+.about-us {
+  margin: 100px 20px 10px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50px;
+}
+
+.about-us h1 {
+  font-size: 40px;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.about-us p {
+  color: #999;
+  text-align: center;
+  max-width: 700px;
+  font-size: 14px;
+  margin: 0 auto 30px;
+  width: 100%;
+}
+
+.rooms {
+  margin: 10px 30px 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.room-pic {
+  max-width: 270px;
+  margin-bottom: 20px;
+}
+
+.about-room {
+  margin: 0 10px;
+}
+
+.room-name {
+  margin-bottom: 10px;
+}
+
+.room-des {
+  color: #999;
+}
+
+.our-team h2 {
+  font-size: 32px;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.our-team p {
+  color: #999;
+  text-align: center;
+  max-width: 700px;
+  font-size: 14px;
+  margin: 0 auto 30px;
+  width: 100%;
+}
+
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  grid-auto-flow: row;
+  margin-bottom: 50px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+}
+.profile-pic {
+  width: 130px;
+  margin-bottom: 10px;
+}
+
+.profile p {
+  margin: 0;
+  text-align: left;
+}
+
+.social-profile {
+  margin-top: 10px;
+}
+
+.social-profile a:link,
+.social-profile a:visited {
+  color: lightgray;
+  margin-right: 5px;
+  text-decoration: none;
+}
+
+.social-profile a:hover,
+.social-profile a:active {
+  color: red;
+}
+
+.footer {
+  background-color: #282828;
+  color: #777;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 10px 50px;
+}
+
+.social-footer {
+  text-align: center;
+  padding: 5px;
+  font-size: 15px;
+}
+.social-footer a:link,
+.social-footer a:visited {
+  color: lightgray;
+  margin-right: 5px;
+  text-decoration: none;
+}
+
+.social-footer a:hover,
+.social-footer a:active {
+  color: red;
+}
+
+.middle-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 50px;
+}
+.middle-footer-header {
+  color: white;
+}
+
+footer {
+  font-size: 12px;
+  text-align: center;
+  border-top: 1px solid rgb(170, 169, 169);
+  padding-top: 10px;
+}
+
+@media (max-width: 769px) and (min-width: 481px) {
+  body {
+    background-color: white;
+  }
+
+  .rooms {
+    /* margin: 10px 30px 30px; */
+    /* display: grid; */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    /* gap: 20px; */
+    /* justify-items: center; */
+  }
+  .room3 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: center;
+    justify-self: center;
+  }
+  .team-members {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px 100px;
+    grid-auto-flow: row;
+    margin-bottom: 50px;
+  }
+
+  .profile-one,
+  .profile-three {
+    justify-self: end;
+  }
+  .profile-two,
+  .profile-four {
+    justify-self: start;
+  }
+
+  .footer {
+    gap: 30px;
+    padding: 10px 10px;
+  }
+  .middle-footer {
+    justify-content: space-between;
+    margin: 10px 20px;
+  }
+}
+
+@media (max-width: 481px) {
+  body {
+    background-color: white;
+  }
+  header {
+    flex-direction: column;
+  }
+
+  .about-us {
+    margin-top: 110px;
+  }
+  .rooms {
+    /* margin: 10px 30px 30px; */
+    /* display: grid; */
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    /* gap: 20px; */
+    /* justify-items: center; */
+  }
+  .room3 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .about-room {
+    text-align: center;
+  }
+  .team-members {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px 100px;
+
+    margin-bottom: 50px;
+  }
+
+  .footer {
+    gap: 10px;
+    padding: 10px 10px;
+  }
+
+  .middle-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    margin: 10px 10px;
+  }
+} ;
